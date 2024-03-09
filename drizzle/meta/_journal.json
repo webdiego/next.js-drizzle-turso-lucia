@@ -1,0 +1,48 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1709197324225,
+      "tag": "0000_mature_mystique",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1709199155832,
+      "tag": "0001_lying_donald_blake",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1709199984714,
+      "tag": "0003_sad_master_chief",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1709200160697,
+      "tag": "0004_lame_tiger_shark",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1709207043537,
+      "tag": "0005_rapid_carmella_unuscione",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1709339410572,
+      "tag": "0006_flimsy_raider",
+      "breakpoints": true
+    }
+  ]
+}
