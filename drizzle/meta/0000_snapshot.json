@@ -1,28 +1,65 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "6cd880ee-27c4-404e-97c1-1e2a2595a7f1",
+  "id": "538add71-933e-4af7-8071-5072f3f7cb98",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "notes": {
-      "name": "notes",
+    "session": {
+      "name": "session",
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
         },
-        "title": {
-          "name": "title",
+        "user_id": {
+          "name": "user_id",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
-        "description": {
-          "name": "description",
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "session_user_id_user_id_fk": {
+          "name": "session_user_id_user_id_fk",
+          "tableFrom": "session",
+          "tableTo": "user",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "user": {
+      "name": "user",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "username": {
+          "name": "username",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
@@ -30,10 +67,10 @@
         }
       },
       "indexes": {
-        "notes_title_unique": {
-          "name": "notes_title_unique",
+        "user_username_unique": {
+          "name": "user_username_unique",
           "columns": [
-            "title"
+            "username"
           ],
           "isUnique": true
         }
