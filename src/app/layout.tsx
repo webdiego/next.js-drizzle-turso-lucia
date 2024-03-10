@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <main className="bg-gradient-to-tl from-yellow-200 to-red-400 min-h-screen flex items-center justify-center">
+        <main className="bg-gradient-to-tl from-yellow-200 to-red-400 min-h-screen flex items-center justify-center px-2">
           {children}
         </main>
         <Toaster />

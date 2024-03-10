@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="flex max-w-xl mx-auto min-h-screen flex-col items-center justify-center text-center ">
       <h1 className="text-3xl sm:text-5xl font-bold">
-        Welcome to next fullstack template
+        The fullstack template that you need to build your next app 🚀
       </h1>
       <p className="mt-4 max-w-sm">
         This is a template for building fullstack applications with{" "}
