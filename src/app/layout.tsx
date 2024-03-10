@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Ubuntu, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Ubuntu({
+  style: "normal",
+  weight: ["400", "500", "700"],
+  display: "swap",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.className}>
       <head />
       <body>
-        <main className="bg-gradient-to-tl from-yellow-200 to-red-400 min-h-screen flex items-center justify-center px-2">
+        <main className="bg-gradient-to-tl from-yellow-200 via-sky-300 to-red-300 min-h-screen flex items-center justify-center px-2">
           {children}
         </main>
         <Toaster />
