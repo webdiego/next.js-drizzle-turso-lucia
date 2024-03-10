@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={rubik.className}>
       <head />
       <body>
-        <main className="bg-gradient-to-tl from-yellow-200 via-sky-300 to-red-300 min-h-screen flex items-center justify-center px-2">
+        <main className="bg-black/[0.96] antialiased bg-grid-white/[0.02] min-h-screen flex items-center justify-center px-2">
           {children}
         </main>
         <Toaster />

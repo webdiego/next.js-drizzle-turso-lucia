@@ -18,10 +18,10 @@ import { SignInSchema } from "../types";
 import { signIn } from "@/app/actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import FormButton from "@/components/FormButton";
 
 export function SignInForm() {
   const router = useRouter();
-
   const form = useForm<z.infer<typeof SignInSchema>>({
     resolver: zodResolver(SignInSchema),
     defaultValues: {
@@ -75,7 +75,11 @@ export function SignInForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <FormButton
+          variant="default"
+          defaultText="Sign in"
+          pendingText="Signing in..."
+        />
       </form>
     </Form>
   );
