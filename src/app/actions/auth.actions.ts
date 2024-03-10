@@ -1,10 +1,9 @@
 "use server";
-import { z } from "zod";
-import { SignInSchema, SignUpSchema } from "../../../types";
+import { SignInSchema, SignUpSchema } from "@/types";
 import { generateId } from "lucia";
 import db from "@/db";
 import { userTable } from "@/db/schema/user";
-import { lucia, validateRequest } from "@/lib/lucia/auth.lucia";
+import { lucia, validateRequest } from "@/lib/lucia/lucia";
 import { cookies } from "next/headers";
 import { eq } from "drizzle-orm";
 import * as argon2 from "argon2";
@@ -14,7 +13,13 @@ export const signUp = async (values: {
   password: string;
 }) => {
   console.log(values);
-
+  try {
+    SignUpSchema.parse(values);
+  } catch (error: any) {
+    return {
+      error: error.message,
+    };
+  }
   const hashedPassword = await argon2.hash(values.password);
   const userId = generateId(15);
 

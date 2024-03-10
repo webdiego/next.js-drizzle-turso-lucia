@@ -14,7 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { SignUpSchema } from "../../types";
+import { SignUpSchema } from "../types";
 import { signUp } from "@/app/actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
@@ -44,7 +44,7 @@ export function SignUpForm() {
         description: "Account created successfully",
       });
 
-      router.push("/");
+      router.push("/profile");
     }
   }
   return (

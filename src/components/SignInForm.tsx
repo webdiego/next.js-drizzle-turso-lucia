@@ -14,7 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { SignInSchema } from "../../types";
+import { SignInSchema } from "../types";
 import { signIn } from "@/app/actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
@@ -43,12 +43,12 @@ export function SignInForm() {
         description: "Signed in successfully",
       });
 
-      router.push("/");
+      router.push("/profile");
     }
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 ">
         <FormField
           control={form.control}
           name="username"
