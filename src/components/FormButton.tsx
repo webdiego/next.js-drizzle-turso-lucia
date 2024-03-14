@@ -7,16 +7,17 @@ export default function FormButton({
   variant = "outline",
   pendingText,
   defaultText,
+  isPending,
 }: {
   variant: "outline" | "default";
   pendingText: string;
   defaultText: string;
+  isPending?: boolean;
 }) {
   const { pending } = useFormStatus();
-  console.log("Pending status", pending, pendingText);
   return (
-    <Button variant={variant} type="submit" disabled={pending}>
-      {pending ? pendingText : defaultText}
+    <Button variant={variant} type="submit" disabled={pending || isPending}>
+      {pending || isPending ? pendingText : defaultText}
     </Button>
   );
 }

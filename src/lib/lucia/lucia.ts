@@ -11,7 +11,6 @@ export const lucia = new Lucia(adapter, {
     },
   },
   getUserAttributes: (attributes) => {
-    console.log(attributes);
     return {
       username: attributes.username,
     };
@@ -24,7 +23,7 @@ export const validateRequest = cache(
   > => {
     const sessionId = cookies().get(lucia.sessionCookieName)?.value ?? null;
 
-    console.log(sessionId);
+    // console.log(sessionId);
     if (!sessionId) {
       return {
         user: null,

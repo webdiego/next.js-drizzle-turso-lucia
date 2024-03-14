@@ -18,8 +18,11 @@ import { SignUpSchema } from "../types";
 import { signUp } from "@/app/actions/auth.actions";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import FormButton from "@/components/FormButton";
 
 export function SignUpForm() {
+  const [isPending, setIsPending] = useState(false);
   const router = useRouter();
 
   const form = useForm<z.infer<typeof SignUpSchema>>({
@@ -32,8 +35,10 @@ export function SignUpForm() {
   });
 
   async function onSubmit(values: z.infer<typeof SignUpSchema>) {
+    setIsPending(true);
     const res = await signUp(values);
     if (res.error) {
+      setIsPending(false);
       toast({
         variant: "destructive",
         description: res.error,
@@ -43,8 +48,10 @@ export function SignUpForm() {
         variant: "default",
         description: "Account created successfully",
       });
-
-      router.push("/profile");
+      setTimeout(() => {
+        setIsPending(false);
+        router.push("/profile");
+      }, 5000);
     }
   }
   return (
@@ -57,7 +64,11 @@ export function SignUpForm() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input
+                  autoComplete="username"
+                  placeholder="shadcn"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -70,7 +81,12 @@ export function SignUpForm() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="****" type="password" {...field} />
+                <Input
+                  autoComplete="current-password"
+                  placeholder="****"
+                  type="password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -89,7 +105,12 @@ export function SignUpForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <FormButton
+          isPending={isPending}
+          variant="default"
+          defaultText="Sign up"
+          pendingText="Signing up..."
+        />
       </form>
     </Form>
   );

@@ -12,7 +12,7 @@ export const signUp = async (values: {
   username: string;
   password: string;
 }) => {
-  console.log(values);
+  // console.log(values);
   try {
     SignUpSchema.parse(values);
   } catch (error: any) {
