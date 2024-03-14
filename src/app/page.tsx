@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { validateRequest } from "@/lib/lucia/lucia";
 import { redirect } from "next/navigation";
-import { signOut } from "@/app/actions/auth.actions";
 import Link from "next/link";
 import { Spotlight } from "@/components/Spotlight";
+import { CopyToClipboard } from "@/components/CopyToClipboard";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
 export default async function Home() {
+  const githubUrl =
+    "https://github.com/webdiego/next.js-drizzle-turso-lucia.git";
+
   const { user } = await validateRequest();
   if (user) {
     return redirect("/profile");
@@ -28,17 +33,35 @@ export default async function Home() {
           <span className="font-bold">Drizzle, </span>and
           <span className="font-bold"> Turso</span>.
         </p>
-        <div className="mt-5 space-x-5 ">
-          <Link href={"/sign-up"}>
-            <Button variant={"outline"} type="submit">
-              Sign up
+        <div className="w-96 my-5">
+          <CopyToClipboard text={`git clone ${githubUrl}`} />
+          <div className="flex items-center justify-center">
+            <Button
+              size="sm"
+              variant={"outline"}
+              asChild
+              className="self-center mt-2"
+            >
+              <a href={githubUrl}>
+                <GitHubLogoIcon className="mr-1 h-5 w-5" />
+                GitHub
+              </a>
             </Button>
-          </Link>
-          <Link href={"/sign-in"}>
-            <Button variant={"outline"} type="submit">
-              Sign in
-            </Button>
-          </Link>
+          </div>
+        </div>
+        <div className="mt-10 flex flex-col items-center ">
+          <p className="text-white font-semibold text-sm">
+            Just try the template, sign up and start building your app.
+          </p>
+          <div className="flex items-center space-x-2 mt-5">
+            <Link href={"/sign-up"}>
+              <Button variant={"outline"}>Sign up</Button>
+            </Link>
+            <p className="text-white text-xs">or</p>
+            <Link href={"/sign-in"}>
+              <Button variant={"outline"}>Sign in</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -27,9 +27,9 @@ export const CopyToClipboard = ({ text }: { text: string }) => {
       <Input
         readOnly
         value={text}
-        className="bg-slate-200 text-muted-foreground"
+        className="bg-slate-300 text-muted-foreground"
       />
-      <Button size="icon" onClick={() => copyToClipboard()}>
+      <Button size="icon" variant={"outline"} onClick={() => copyToClipboard()}>
         {copied ? (
           <CheckIcon
             className={cn(
@@ -38,7 +38,7 @@ export const CopyToClipboard = ({ text }: { text: string }) => {
             )}
           />
         ) : (
-          <CopyIcon className="h-5 w-5" />
+          <CopyIcon className="h-5 w-5 text-gray-900" />
         )}
       </Button>
     </div>
