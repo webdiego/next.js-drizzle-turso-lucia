@@ -33,7 +33,7 @@ export default async function Home() {
           <span className="font-bold">Drizzle, </span>and
           <span className="font-bold"> Turso</span>.
         </p>
-        <div className="w-96 my-5">
+        <div className="w-94 my-5">
           <CopyToClipboard text={`git clone ${githubUrl}`} />
           <div className="flex items-center justify-center">
             <Button
@@ -50,7 +50,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="mt-10 flex flex-col items-center ">
-          <p className="text-white font-semibold text-sm">
+          <p className="text-white font-semibold text-sm text-center">
             Just try the template, sign up and start building your app.
           </p>
           <div className="flex items-center space-x-2 mt-5">
