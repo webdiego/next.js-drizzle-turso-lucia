@@ -12,7 +12,7 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.7":
+"@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.24.0":
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.0.tgz#584c450063ffda59697021430cb47101b085951e"
   integrity sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==
@@ -39,18 +39,6 @@
   integrity sha512-Txumi3td7J4A/xTTwlssKieHKTGl3j4A1tglBx72auZ49YK7ePY6XZricgIg9mnZT4xPfA+UPCUdnhRuEFDL+w==
   dependencies:
     tslib "^2.4.0"
-
-"@emotion/is-prop-valid@^0.8.2":
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
-  integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
-  dependencies:
-    "@emotion/memoize" "0.7.4"
-
-"@emotion/memoize@0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
-  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
 
 "@esbuild-kit/core-utils@^3.3.2":
   version "3.3.2"
@@ -393,32 +381,32 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@libsql/client@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.5.3.tgz#300381d3b4b2e23f0b601f51828fdfedb2605f86"
-  integrity sha512-GsOTv/Yikw8I9ZBqpxwfcDM2GDFtyZfJg7MYgWqVnNXtsqCa+tabSuRVKe34UaG2FjcOFJr9buB4vbl55geXXw==
+"@libsql/client@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.5.6.tgz#897e1cb3f45f625bce2035f41caac1e16b7a8927"
+  integrity sha512-UBjmDoxz75Z2sHdP+ETCROpeLA/77VMesiff8R4UWK1rnaWbh6/YoCLDILMJL3Rh0udQeKxjL8MjXthqohax+g==
   dependencies:
-    "@libsql/core" "^0.5.3"
+    "@libsql/core" "^0.5.6"
     "@libsql/hrana-client" "^0.5.6"
     js-base64 "^3.7.5"
-    libsql "^0.3.7"
+    libsql "^0.3.10"
 
-"@libsql/core@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@libsql/core/-/core-0.5.3.tgz#e1f783ab57a733940652451c96d306182480a8f3"
-  integrity sha512-vccnRnLIeru4hacfowXDZZRxYyFWN8Z6CSs+951rH7w9JOMzwmetn5IYsXw5VcOIf0P0aLa86Uhvl1MF8jM6pA==
+"@libsql/core@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@libsql/core/-/core-0.5.6.tgz#0cd4bf3362f3e133e7ea949cf78e90d53c72408f"
+  integrity sha512-3vicUAydq6jPth410n4AsHHm1n2psTwvkSf94nfJlSXutGSZsl0updn2N/mJBgqUHkbuFoWZtlMifF0SwBj1xQ==
   dependencies:
     js-base64 "^3.7.5"
 
-"@libsql/darwin-arm64@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/darwin-arm64/-/darwin-arm64-0.3.8.tgz#6844d50868ff928241645a86e3539275bcff8335"
-  integrity sha512-uh9dfDsmx0NfBjJbFm8APPD8E5s18mxmmmuH4IdSTl/xdv9URAeYo8zv9s2SHgM62QbUUcokLDzLgFfOGSsFBA==
+"@libsql/darwin-arm64@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-arm64/-/darwin-arm64-0.3.10.tgz#50834ec7c2d9a5d92dd42a46bc99c1c82a11ab7a"
+  integrity sha512-RaexEFfPAFogd6dJlqkpCkTxdr6K14Z0286lodIJ8Ny77mWuWyBkWKxf70OYWXXAMxMJFUW+6al1F3/Osf/pTg==
 
-"@libsql/darwin-x64@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.3.8.tgz#1712c89a7b65dfae338c8bb4eefbae9317fbf51e"
-  integrity sha512-+5CSFTMs86thuUJW2emzCqrZunueR4ilUV9J1HeZgUtSiQg32/z5GdCR0027JgALqB++yhFGY4WK4SNAPWdKaA==
+"@libsql/darwin-x64@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.3.10.tgz#341d61b92e02c3c66ff14dc5b8a3c1a664f84512"
+  integrity sha512-SNVN6n4qNUdMW1fJMFmx4qn4n5RnXsxjFbczpkzG/V7m/5VeTFt1chhGcrahTHCr3+K6eRJWJUEQHRGqjBwPkw==
 
 "@libsql/hrana-client@^0.5.6":
   version "0.5.6"
@@ -446,35 +434,35 @@
     "@types/ws" "^8.5.4"
     ws "^8.13.0"
 
-"@libsql/linux-arm64-gnu@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.3.8.tgz#7c08ff2fa2682b24a3ecdfa09a2596a2cf8a2eb4"
-  integrity sha512-s9blvMx2tA0HGnTHUhEtZZoBLoZqaTxVyjM4qFrxJO84GP902N/DXtbxO2ib6Jbs5rom+78DkpHmi7PzBDLCZA==
+"@libsql/linux-arm64-gnu@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.3.10.tgz#695a94bdca68722c3303c181a62f5193acc7af31"
+  integrity sha512-2uXpi9d8qtyIOr7pyG4a88j6YXgemyIHEs2Wbp+PPletlCIPsFS+E7IQHbz8VwTohchOzcokGUm1Bc5QC+A7wg==
 
-"@libsql/linux-arm64-musl@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.3.8.tgz#ac5cd5a8dfe5a1029fc9feab0421cb0d3876d963"
-  integrity sha512-Gw+g5GbeAXdONzpmKVvvdIk/8cCjn0MeN8KNm59xbuwWnkA0NCz94UMD725xOoyl3z+olBxhAdE5yEznLSTcag==
+"@libsql/linux-arm64-musl@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.3.10.tgz#4ae8badda2869974589198bc2bd3cba1cc6cc27c"
+  integrity sha512-72SN1FUavLvzHddCS861ynSpQndcW5oLGKA3U8CyMfgIZIwJAPc7+48Uj1plW00htXBx4GBpcntFp68KKIx3YQ==
 
-"@libsql/linux-x64-gnu@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.3.8.tgz#18191a71c7d7e6a9aacf569b224e69ca4cfeda75"
-  integrity sha512-XRpzXlbM0ZvPVB8/bhun/4dhRUt4PBo1zTz0njaWo/EQoZNGQkps1IZv7v3wR40Kcug4qvmuXTCGuYPQN4QI7w==
+"@libsql/linux-x64-gnu@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.3.10.tgz#a0c7852087e2b0ac6bedda3d1c9d7d5f864c3ef6"
+  integrity sha512-hXyNqVRi7ONuyWZ1SX6setxL0QaQ7InyS3bHLupsi9s7NpOGD5vcpTaYicJOqmIIm+6kt8vJfmo7ZxlarIHy7Q==
 
-"@libsql/linux-x64-musl@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.3.8.tgz#b652e11926eb3500dabbaf02559523db82343cbc"
-  integrity sha512-gjqjqXpSBj3aB7Q2D0zgoYlquJr8WkPXaByjXE4XYNzcRRg6o+q3V3Uv9s6yhKBoLiBsltUETFJLCoQNzUv9kA==
+"@libsql/linux-x64-musl@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.3.10.tgz#fc46c27b94fff0a565f28cb7bbd8ca7a77e55364"
+  integrity sha512-kNmIRxomVwt9S+cLyYS497F/3gXFF4r8wW12YSBQgxG75JYft07AHVd8J7HINg+oqRkLzT0s+mVX5dM6nk68EQ==
 
-"@libsql/win32-x64-msvc@0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.3.8.tgz#39751a54d25c5c9d86cbb41974567f16d73c1796"
-  integrity sha512-KbqqgbL2iBciVFZSJ//36U0Fr6P6AAcLpJPqVckRdNOC43whZlKNglmjtzQDOq3+UVieC8OkLUPEDShRIcSDZA==
+"@libsql/win32-x64-msvc@0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.3.10.tgz#32805c76c63f5ae3a1628f986bd56bcac1566aec"
+  integrity sha512-c/6rjdtGULKrJkLgfLobFefObfOtxjXGmCfPxv6pr0epPCeUEssfDbDIeEH9fQUgzogIMWEHwT8so52UJ/iT1Q==
 
-"@lucia-auth/adapter-drizzle@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@lucia-auth/adapter-drizzle/-/adapter-drizzle-1.0.3.tgz#32028f82680f35055ae1065d78e30243c93ede0d"
-  integrity sha512-5C3O5PGV9IpGTM8cr5trE9+Pr3FM8LXOUPusQWD3svGW/S7vNebQit7uEfDUxFAuUhutoLoXTr7SQ1jZWjaBoA==
+"@lucia-auth/adapter-drizzle@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@lucia-auth/adapter-drizzle/-/adapter-drizzle-1.0.4.tgz#0d0574131c8169208729f2907466ffc2abd94d3a"
+  integrity sha512-eF0DyebhgG8SLBpEG0BiDLm9DLCCYJj3EFN4TvU/oaJ7expEuY5nPZj4mvUpxX8I9DYwC7ROhMWC9WyjY1pQ9Q==
 
 "@napi-rs/wasm-runtime@^0.1.1":
   version "0.1.1"
@@ -1145,10 +1133,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^20.11.25":
-  version "20.11.25"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.25.tgz#0f50d62f274e54dd7a49f7704cc16bfbcccaf49f"
-  integrity sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==
+"@types/node@^20.11.28":
+  version "20.11.28"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.28.tgz#4fd5b2daff2e580c12316e457473d68f15ee6f66"
+  integrity sha512-M/GPWVS2wLkSkNHVeLkrF2fD5Lx5UC4PxA0uZcKc6QqbIQUJyW1jVjueJYi1z8n0I5PxYrtpnPnWglE+y9A0KA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1157,10 +1145,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.11.tgz#2596fb352ee96a1379c657734d4b913a613ad563"
   integrity sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==
 
-"@types/react-dom@^18.2.21":
-  version "18.2.21"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.21.tgz#b8c81715cebdebb2994378616a8d54ace54f043a"
-  integrity sha512-gnvBA/21SA4xxqNXEwNiVcP0xSGHh/gi1VhWv9Bl46a0ItbTT5nFY+G9VSQpaG/8N/qdJpJ+vftQ4zflTtnjLw==
+"@types/react-dom@^18.2.22":
+  version "18.2.22"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.22.tgz#d332febf0815403de6da8a97e5fe282cbe609bae"
+  integrity sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==
   dependencies:
     "@types/react" "*"
 
@@ -1173,10 +1161,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^18.2.64":
-  version "18.2.64"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.64.tgz#3700fbb6b2fa60a6868ec1323ae4cbd446a2197d"
-  integrity sha512-MlmPvHgjj2p3vZaxbQgFUQFvD8QiZwACfGqEdDSWou5yISWxDQ4/74nCAwsUiX7UFLKZz3BbVSPj+YxeoGGCfg==
+"@types/react@^18.2.66":
+  version "18.2.66"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.66.tgz#d2eafc8c4e70939c5432221adb23d32d76bfe451"
+  integrity sha512-OYTmMI4UigXeFMF/j4uv0lBBEbongSgptPrHBxqME44h9+yNov+oL6Z3ocJKo0WyXR84sQUNeyIp9MRfckvZpg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1816,10 +1804,10 @@ drizzle-kit@^0.20.14:
     semver "^7.5.4"
     zod "^3.20.2"
 
-drizzle-orm@^0.30.1:
-  version "0.30.1"
-  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.30.1.tgz#309fa01d879de333db0ea4eb31f92367ce08a6ea"
-  integrity sha512-5P6CXl4XyWtDDiYOX/jYOJp1HTUmBlXRAwaq+muUOgaSykMEy5sJesCxceMT0oCGvxeWkKfSXo5owLnfKwCIdw==
+drizzle-orm@^0.30.2:
+  version "0.30.2"
+  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.30.2.tgz#fa5999a30be6a7a972aa2e114fb677c8f85dc437"
+  integrity sha512-DNd3djg03o+WxZX3pGD8YD+qrWT8gbrbhaZ2W0PVb6yH4rtM/VTB92cTGvumcRh7SSd2KfV0NWYDB70BHIXQTg==
 
 eastasianwidth@^0.2.0:
   version "0.2.0"
@@ -2419,14 +2407,12 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^11.0.8:
-  version "11.0.8"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.0.8.tgz#8f97a18cbad5858d85b53bc325c40a03d0a5c203"
-  integrity sha512-1KSGNuqe1qZkS/SWQlDnqK2VCVzRVEoval379j0FiUBJAZoqgwyvqFkfvJbgW2IPFo4wX16K+M0k5jO23lCIjA==
+framer-motion@^11.0.14:
+  version "11.0.14"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.0.14.tgz#621218e48c25847abd5bf3ee168919b2cab7a113"
+  integrity sha512-RFjo2hB1MTW0EWsHQaXgVn0AEUDGxAs0ZL2vVjTTJJu3N7wFiLkmqTn5ysLjL+qKZ9jvfpKXDb9waN9AyLqk8g==
   dependencies:
     tslib "^2.4.0"
-  optionalDependencies:
-    "@emotion/is-prop-valid" "^0.8.2"
 
 fs-monkey@^1.0.4:
   version "1.0.5"
@@ -2980,21 +2966,21 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-libsql@^0.3.7:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/libsql/-/libsql-0.3.8.tgz#bc16193b16a4f5c99c039348568029cb29207e43"
-  integrity sha512-tz12gCfDXl6WKwtpxpw6PaZtkecHQQQTHuuj6RLQvEfOB17bPpmo8xdC55S4J6fx6qzmqJbaLZSlA6gYJgUXkg==
+libsql@^0.3.10:
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/libsql/-/libsql-0.3.10.tgz#e4eebc7da5cfbbddcac15248df7442e13ff07942"
+  integrity sha512-/8YMTbwWFPmrDWY+YFK3kYqVPFkMgQre0DGmBaOmjogMdSe+7GHm1/q9AZ61AWkEub/vHmi+bA4tqIzVhKnqzg==
   dependencies:
     "@neon-rs/load" "^0.0.4"
     detect-libc "2.0.2"
   optionalDependencies:
-    "@libsql/darwin-arm64" "0.3.8"
-    "@libsql/darwin-x64" "0.3.8"
-    "@libsql/linux-arm64-gnu" "0.3.8"
-    "@libsql/linux-arm64-musl" "0.3.8"
-    "@libsql/linux-x64-gnu" "0.3.8"
-    "@libsql/linux-x64-musl" "0.3.8"
-    "@libsql/win32-x64-msvc" "0.3.8"
+    "@libsql/darwin-arm64" "0.3.10"
+    "@libsql/darwin-x64" "0.3.10"
+    "@libsql/linux-arm64-gnu" "0.3.10"
+    "@libsql/linux-arm64-musl" "0.3.10"
+    "@libsql/linux-x64-gnu" "0.3.10"
+    "@libsql/linux-x64-musl" "0.3.10"
+    "@libsql/win32-x64-msvc" "0.3.10"
 
 lilconfig@^2.1.0:
   version "2.1.0"
@@ -3061,10 +3047,10 @@ lucia@^3.1.1:
   dependencies:
     oslo "1.0.1"
 
-lucide-react@^0.354.0:
-  version "0.354.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.354.0.tgz#c5c9d9d1d98cf9e586154f5c4e77777a8b42169f"
-  integrity sha512-qI0x/hhcuHieaUUxFejesm5T/ditszQ2x1gUkqKnTMZRAOdxT2nGzbOFYrhc0wRjuA2MN1o5JCrcRPYcHH3l8A==
+lucide-react@^0.358.0:
+  version "0.358.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.358.0.tgz#6eceed9275de27dcdb45b728c3686e967aaaef4f"
+  integrity sha512-rBSptRjZTMBm24zsFhR6pK/NgbT18JegZGKcH4+1H3+UigMSRpeoWLtR/fAwMYwYnlJOZB+y8WpeHne9D6X6Kg==
 
 memfs-browser@^3.4.13000:
   version "3.5.10302"
@@ -3549,10 +3535,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-hook-form@^7.51.0:
-  version "7.51.0"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.51.0.tgz#757ae71b37c26e00590bd3788508287dcc5ecdaf"
-  integrity sha512-BggOy5j58RdhdMzzRUHGOYhSz1oeylFAv6jUSG86OvCIvlAvS7KvnRY7yoAf2pfEiPN7BesnR0xx73nEk3qIiw==
+react-hook-form@^7.51.1:
+  version "7.51.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.51.1.tgz#3ce5f8b5ef41903b4054a641cef8c0dc8bf8ae85"
+  integrity sha512-ifnBjl+kW0ksINHd+8C/Gp6a4eZOdWyvRv0UBaByShwU8JbVx5hTcTWEcd5VdybvmPTATkVVXk9npXArHmo56w==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -3900,12 +3886,12 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwind-merge@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.2.1.tgz#3f10f296a2dba1d88769de8244fafd95c3324aeb"
-  integrity sha512-o+2GTLkthfa5YUt4JxPfzMIpQzZ3adD1vLVkvKE1Twl9UAhGsEbIZhHHZVRttyW177S8PDJI3bTQNaebyofK3Q==
+tailwind-merge@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.2.2.tgz#87341e7604f0e20499939e152cd2841f41f7a3df"
+  integrity sha512-tWANXsnmJzgw6mQ07nE3aCDkCK4QdT3ThPMCzawoYA2Pws7vSTCvz3Vrjg61jVUGfFZPJzxEP+NimbcW+EdaDw==
   dependencies:
-    "@babel/runtime" "^7.23.7"
+    "@babel/runtime" "^7.24.0"
 
 tailwindcss-animate@^1.0.7:
   version "1.0.7"
