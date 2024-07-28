@@ -12,7 +12,7 @@ export const signUp = async (values: {
   username: string;
   password: string;
 }) => {
-  // console.log(values);
+  // Check with Zod if the values are valid
   try {
     SignUpSchema.parse(values);
   } catch (error: any) {
@@ -20,9 +20,12 @@ export const signUp = async (values: {
       error: error.message,
     };
   }
+  // Hash the password
   const hashedPassword = await argon2.hash(values.password);
+  // Generate a random ID for the user
   const userId = generateId(15);
 
+  // Insert the user into the database
   try {
     await db
       .insert(userTable)
@@ -36,12 +39,15 @@ export const signUp = async (values: {
         username: userTable.username,
       });
 
+    // Create a session for the user
     const session = await lucia.createSession(userId, {
       expiresIn: 60 * 60 * 24 * 30,
     });
 
+    // Create a session cookie
     const sessionCookie = lucia.createSessionCookie(session.id);
 
+    // Set the session cookie
     cookies().set(
       sessionCookie.name,
       sessionCookie.value,
@@ -65,6 +71,7 @@ export const signIn = async (values: {
   username: string;
   password: string;
 }) => {
+  // Check with Zod if the values are valid
   try {
     SignInSchema.parse(values);
   } catch (error: any) {
@@ -72,22 +79,19 @@ export const signIn = async (values: {
       error: error.message,
     };
   }
+  // Find the user in the database
   const existingUser = await db.query.userTable.findFirst({
     where: (table) => eq(table.username, values.username),
   });
 
-  if (!existingUser) {
+  // If the user is not found, return an error
+  if (!existingUser || !existingUser.hashedPassword) {
     return {
       error: "User not found",
     };
   }
 
-  if (!existingUser.hashedPassword) {
-    return {
-      error: "User not found",
-    };
-  }
-
+  // Verify the password
   const isValidPassword = await argon2.verify(
     existingUser.hashedPassword,
     values.password
@@ -99,12 +103,15 @@ export const signIn = async (values: {
     };
   }
 
+  // Create a session for the user
   const session = await lucia.createSession(existingUser.id, {
     expiresIn: 60 * 60 * 24 * 30,
   });
 
+  // Create a session cookie
   const sessionCookie = lucia.createSessionCookie(session.id);
 
+  // Set the session cookie
   cookies().set(
     sessionCookie.name,
     sessionCookie.value,
@@ -117,6 +124,7 @@ export const signIn = async (values: {
 };
 
 export const signOut = async () => {
+  // Validate the request to get the session
   try {
     const { session } = await validateRequest();
 
@@ -126,10 +134,13 @@ export const signOut = async () => {
       };
     }
 
+    // Invalidate the session
     await lucia.invalidateSession(session.id);
 
+    // Creates a new cookie with a blank value that expires immediately to delete the existing session cookie.
     const sessionCookie = lucia.createBlankSessionCookie();
 
+    // Set the session cookie as blank
     cookies().set(
       sessionCookie.name,
       sessionCookie.value,
