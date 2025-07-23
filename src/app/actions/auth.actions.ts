@@ -7,6 +7,7 @@ import { lucia, validateRequest } from "@/lib/lucia/lucia";
 import { cookies } from "next/headers";
 import { eq } from "drizzle-orm";
 import * as argon2 from "argon2";
+import bcrypt from "bcryptjs";
 
 export const signUp = async (values: {
   username: string;
@@ -21,7 +22,8 @@ export const signUp = async (values: {
     };
   }
   // Hash the password
-  const hashedPassword = await argon2.hash(values.password);
+  // const hashedPassword = await argon2.hash(values.password);
+  const hashedPassword = await bcrypt.hash(values.password, 10);
   // Generate a random ID for the user
   const userId = generateId(15);
 
@@ -92,9 +94,13 @@ export const signIn = async (values: {
   }
 
   // Verify the password
-  const isValidPassword = await argon2.verify(
-    existingUser.hashedPassword,
-    values.password
+  // const isValidPassword = await argon2.verify(
+  //   existingUser.hashedPassword,
+  //   values.password
+  // );
+  const isValidPassword = await bcrypt.compare(
+    values.password,
+    existingUser.hashedPassword
   );
 
   if (!isValidPassword) {
